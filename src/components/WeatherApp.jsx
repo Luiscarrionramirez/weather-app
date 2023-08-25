@@ -15,7 +15,7 @@ const WeatherApp = () => {
 
    const loadInfo = async (city = "London") => {
       try {
-         const request = await fetch(`http://api.weatherapi.com/v1/current.json&key=8a41fd77efce42cf95421414232507&q=${city}&aqi=no`);
+         const request = await fetch(`http://api.weatherapi.com/v1/current.json?key=8a41fd77efce42cf95421414232507&q=${city}&aqi=no`);
          if (!request.ok) {
             throw new Error("Error en la consulta"); // Lanzar un error si la respuesta no es exitosa
           }
